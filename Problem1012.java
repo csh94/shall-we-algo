@@ -50,12 +50,12 @@ public class Problem1012 {
         return count;
     }
 
-    public static void conc(int x, int y) {
-        map[x][y] = 0;
+    public static void conc(int z, int q) {
+        map[z][q] = 0;
         for (int i=0; i<4; i++) {
-            if(x+dx[i] >= 0 && x+dx[i] < n && y+dy[i] >= 0 && y+dy[i] < m) {
-                if(map[i+dx[i]][y+dy[i]] == 1) {
-                    conc(x+dx[i], y+dy[i]);
+            if(z+dx[i] >= 0 && z+dx[i] < n && q+dy[i] >= 0 && q+dy[i] < m) {
+                if(map[z+dx[i]][q+dy[i]] == 1) {
+                    conc(z+dx[i], q+dy[i]);
                 }
             }
         }
